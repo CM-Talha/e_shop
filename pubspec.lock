@@ -73,7 +73,7 @@ packages:
       name: glass_container
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.0.1"
+    version: "0.0.2"
   matcher:
     dependency: transitive
     description:
