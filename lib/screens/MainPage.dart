@@ -12,26 +12,16 @@ class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: Container(
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            colorFilter: ColorFilter.mode(Colors.white.withOpacity(0.2), BlendMode.lighten),
-            image: AssetImage('lib/BG.jpg'),
-            fit: BoxFit.cover,
-          ),
-        ),
-        child: BottomNavigationBar(
+      bottomNavigationBar: BottomNavigationBar(
           type: BottomNavigationBarType.fixed,
-          backgroundColor: Colors.transparent,
+          //backgroundColor: Colors.transparent,
           elevation: 0,
-          showSelectedLabels: true,
           items: [
             BottomNavigationBarItem(icon: Icon(Icons.home), label: 'a'),
             BottomNavigationBarItem(icon: Icon(Icons.home), label: 'b'),
             BottomNavigationBarItem(icon: Icon(Icons.home), label: 'c'),
           ],
         ),
-      ),
       body: Container(
         height: double.infinity,
         width: double.infinity,
@@ -49,19 +39,48 @@ class _MainPageState extends State<MainPage> {
                   padding: const EdgeInsets.all(8.0),
                   child: GlassContainer(
                     contHeight: 200,
+                     shadowBlurRadius: 50,
+                    sigmax: 1,
+                    contColor: Colors.white.withOpacity(0.2),
+                    borderRadiusColor: Colors.white.withOpacity(0.15),
+                    sigmay: 1,
+                    shadowSpreadRadius: 3,
                   ),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: GlassContainer(
                     contHeight: 200,
+                     shadowBlurRadius: 50,
+                    sigmax: 1,
+                    contColor: Colors.white.withOpacity(0.2),
+                    borderRadiusColor: Colors.white.withOpacity(0.15),
+                    sigmay: 1,
+                    shadowSpreadRadius: 3,
                   ),
                 ),
-                Container(
-                  height: 300,
-                ),
-                Container(
-                  height: 300,
+               Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: GlassContainer(
+                    contHeight: 200,
+                     shadowBlurRadius: 50,
+                    sigmax: 1,
+                    contColor: Colors.white.withOpacity(0.2),
+                    borderRadiusColor: Colors.white.withOpacity(0.15),
+                    sigmay: 1,
+                    shadowSpreadRadius: 3,
+                  ),
+                ),Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: GlassContainer(
+                    contHeight: 200,
+                     shadowBlurRadius: 50,
+                    sigmax: 1,
+                    contColor: Colors.white.withOpacity(0.2),
+                    borderRadiusColor: Colors.white.withOpacity(0.15),
+                    sigmay: 1,
+                    shadowSpreadRadius: 3,
+                  ),
                 ),
               ],
             ),
