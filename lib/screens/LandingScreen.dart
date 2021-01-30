@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:glass_container/glass_container.dart';
-import 'SliderModel.dart';
+import 'package:e_shop/Components/SliderModel.dart';
 
 class LandingScreen extends StatefulWidget {
   LandingScreen({Key key}) : super(key: key);
