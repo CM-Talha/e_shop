@@ -9,7 +9,7 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
-  bool pass=true;
+  bool pass = true;
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
@@ -18,14 +18,13 @@ class _LoginState extends State<Login> {
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage(
-                'lib/BG.jpg'),
+            image: AssetImage('lib/BG.jpg'),
             fit: BoxFit.cover,
           ),
         ),
         child: SafeArea(
           child: SingleChildScrollView(
-                      child: Center(
+            child: Center(
               child: Column(
                 children: [
                   SizedBox(
@@ -91,13 +90,15 @@ class _LoginState extends State<Login> {
                               keyboardType: TextInputType.visiblePassword,
                               decoration: InputDecoration(
                                 suffixIcon: InkWell(
-                                    onTap: () {
-                                      setState(() {
-                                        pass == true ? pass = false : pass = true;
-                                      });
-                                    },
-                                    child: pass==true ? Icon(Icons.visibility_off)
-                                     :Icon(Icons.visibility),),
+                                  onTap: () {
+                                    setState(() {
+                                      pass == true ? pass = false : pass = true;
+                                    });
+                                  },
+                                  child: pass == true
+                                      ? Icon(Icons.visibility_off)
+                                      : Icon(Icons.visibility),
+                                ),
                                 hintText: 'Password',
                                 border: OutlineInputBorder().copyWith(
                                   borderRadius: BorderRadius.circular(25),
@@ -111,13 +112,19 @@ class _LoginState extends State<Login> {
                               height: 20,
                             ),
                             InkWell(
+                              onTap: () {
+                                setState(() {
+                                  Navigator.popAndPushNamed(context, '/c');
+                                });
+                              },
                               splashColor: Colors.black,
                               child: GlassContainer(
                                 contHeight: 50,
                                 contColor: Colors.white.withOpacity(0.17),
                                 shadowBlurRadius: 80,
                                 shadowSpreadRadius: 1,
-                                borderRadiusColor: Colors.white.withOpacity(0.1),
+                                borderRadiusColor:
+                                    Colors.white.withOpacity(0.1),
                                 shadowColor: Colors.black.withOpacity(0.09),
                                 child: Center(
                                   child: Text(
@@ -153,7 +160,8 @@ class _LoginState extends State<Login> {
                                 contColor: Colors.white.withOpacity(0.17),
                                 shadowBlurRadius: 80,
                                 shadowSpreadRadius: 1,
-                                borderRadiusColor: Colors.white.withOpacity(0.1),
+                                borderRadiusColor:
+                                    Colors.white.withOpacity(0.1),
                                 shadowColor: Colors.black.withOpacity(0.09),
                                 child: Center(
                                   child: Text(
@@ -207,7 +215,9 @@ class _LoginState extends State<Login> {
                       ),
                     ),
                   ),
-                  SizedBox(height: 100,)
+                  SizedBox(
+                    height: 100,
+                  )
                 ],
               ),
             ),

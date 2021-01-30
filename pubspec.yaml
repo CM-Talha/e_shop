@@ -23,9 +23,10 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  carousel_slider: ^2.3.1
   cupertino_icons: ^1.0.0
+  curved_navigation_bar: ^0.3.7
   glass_container: ^0.0.2
-  curved_navigation_bar: ^0.3.7 #latest version
 
 dev_dependencies:
   flutter_test:
