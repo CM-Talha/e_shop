@@ -3,9 +3,11 @@ import 'package:e_shop/screens/LoginScreen.dart';
 import 'package:e_shop/screens/MainPage.dart';
 import 'package:e_shop/screens/Sign-Up.dart';
 import 'package:flutter/material.dart';
-
-main(List<String> args) {
+import 'package:firebase_core/firebase_core.dart';
+main(List<String> args) async{
   runApp(MyApp());
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
 }
 
 class MyApp extends StatelessWidget {
