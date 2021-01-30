@@ -1,20 +1,40 @@
+import 'package:e_shop/Components/Auth.dart';
 import 'package:flutter/material.dart';
 import 'package:glass_container/glass_container.dart';
 
 class Login extends StatefulWidget {
-  Login({Key key}) : super(key: key);
+
+  const Login({Key key,}) : super(key: key);
 
   @override
   _LoginState createState() => _LoginState();
 }
 
 class _LoginState extends State<Login> {
+  TextEditingController _emailController;
+  TextEditingController _passwordController;
+  @override
+  void initState() {
+    _emailController = TextEditingController();
+    _passwordController = TextEditingController();
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    _emailController.dispose();
+    _passwordController.dispose();
+    super.dispose();
+  }
+
+  final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
   bool pass = true;
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
     return Scaffold(
+      key: _scaffoldKey,
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
@@ -71,6 +91,7 @@ class _LoginState extends State<Login> {
                               height: 20,
                             ),
                             TextField(
+                              controller: _emailController,
                               keyboardType: TextInputType.emailAddress,
                               decoration: InputDecoration(
                                 hintText: 'E-mail',
@@ -86,6 +107,7 @@ class _LoginState extends State<Login> {
                               height: 20,
                             ),
                             TextField(
+                              controller: _passwordController,
                               obscureText: pass,
                               keyboardType: TextInputType.visiblePassword,
                               decoration: InputDecoration(
