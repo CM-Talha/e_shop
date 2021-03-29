@@ -35,7 +35,7 @@ class SliderModel{
 
 List<SliderModel> getSlides(){
 
-  List<SliderModel> slides = new List<SliderModel>();
+  List<SliderModel> slides = [];
   SliderModel sliderModel = new SliderModel();
 
   //1
