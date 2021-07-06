@@ -44,7 +44,7 @@ class _HomeState extends State<Home> {
                         options: CarouselOptions(),
                         itemBuilder: (context, a) {
                           return GlassContainer(
-                            
+                            child: Container(color: Colors.redAccent,),
                           );
                         },
                       ),
